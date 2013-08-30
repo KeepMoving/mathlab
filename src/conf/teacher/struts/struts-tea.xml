@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="teacher" extends="struts-default">		
+		<action name="addTeacher" class="addTeacherAction">
+			<result name="addTeacherSuccess" >Success.html</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="listTea" class="listTeaAction">
+			<result name="listTeaSuccess" type="freemarker">/WEB-INF/pages/listTeacher.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="listCourseTea" class="listCourseTeaAction">
+			<result name="listCourseTeaSuccess" type="freemarker">/WEB-INF/pages/addCourse.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>	
+		
+		<action name="preEditTea" class="preEditTeaAction">
+			<result name="success" type="freemarker">/WEB-INF/pages/editTea.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="editTea" class="editTeaAction">
+			<result name="Success">Success.html</result>
+			<result name="input" >Fail.html</result>
+		</action>	
+		
+		<action name="deleteTea" class="deleteTeaAction">
+			<result name="deleteTeaSuccess" type="redirect">listTea.action</result>
+		</action>	
+	</package>
+</struts>

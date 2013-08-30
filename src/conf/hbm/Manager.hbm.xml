@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping 	package="com.mathlab.model">
+	<class name="Manager" table="man">
+		<id name="manID" column="manID">
+			<generator class="identity"/>
+		</id>				
+		<property name="manName" column="man_manName" type="string"/>
+		<property name="manPwd" column="man_manPwd" type="string"/>
+		<property name="authority" column="man_authority" type="string"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false" default-dependency-check="none"
+	default-autowire="byName">
+	
+	<bean name="addTeacherAction" class="com.mathlab.action.AddTeacherAction" singleton="false" />	
+	<bean name="listTeaAction" class="com.mathlab.action.ListTeaAction" singleton="false" />	
+	<bean name="listCourseTeaAction" class="com.mathlab.action.ListCourseTeaAction" singleton="false" />
+	<bean name="preEditTeaAction" class="com.mathlab.action.PreEditTeaAction" singleton="false" />
+	<bean name="editTeaAction" class="com.mathlab.action.EditTeaAction" singleton="false" />
+	<bean name="deleteTeaAction" class="com.mathlab.action.DeleteTeaAction" singleton="false" />			
+</beans>

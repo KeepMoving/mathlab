@@ -1,0 +1,31 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="note" extends="struts-default">		
+		<action name="addNote" class="addNoteAction">
+			<result name="success" >Success.html</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+	    <action name="listNote" class="listNoteAction">
+			<result name="listNoteSuccess" type="freemarker">/WEB-INF/pages/listNote.ftl</result>
+		</action>
+		
+	    <action name="deleteNote" class="deleteNoteAction">
+		   <result name="deleteNoteSucess" type="redirect">listNote.action</result>
+		</action>
+		
+		<action name="replyNote" class="replyNoteAction">
+			<result name="success" type="redirect">listNote.action</result>
+			<result name="input" >Fail.html</result>
+		</action>	
+		
+		<action name="preReplyNote" class="preReplyNoteAction">
+			<result name="success" type="freemarker">/WEB-INF/pages/replyNote.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>
+	</package>
+</struts>

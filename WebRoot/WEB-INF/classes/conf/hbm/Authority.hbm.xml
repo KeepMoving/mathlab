@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping 	package="com.mathlab.model">
+	<class name="Authority" table="auth">
+		<id name="id"  column="id">
+			<generator class="identity"/>
+		</id>				
+		<property name="authName" column="auth_authname" type="string"/>
+		<property name="detail" column="auth_detail" type="string"/>		
+	</class>
+</hibernate-mapping>

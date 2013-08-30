@@ -1,0 +1,12 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="course" extends="struts-default">		
+		<action name="addCourse" class="addCourseAction">
+			<result name="addCourseSuccess" >Success.html</result>
+			<result name="input" >Fail.html</result>
+		</action>	
+	</package>
+</struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping 	package="com.mathlab.model">
+	<class name="Grade" table="grade">
+		<id name="graID" column="graID">
+			<generator class="identity"/>
+		</id>			
+		<property name="graName" column="grade_graName" type="string"/>
+		<property name="school" column="classes_school" type="string"/>
+		<property name="detail" column="classes_detail" type="string"/>						
+	</class>
+</hibernate-mapping>

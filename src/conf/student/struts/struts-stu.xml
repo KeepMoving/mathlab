@@ -1,0 +1,38 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="student" extends="struts-default">		
+		<action name="addStu" class="addStuAction">
+			<result name="addStuSuccess" >Success.html</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="listStu" class="listStuAction">
+			<result name="listStuSuccess" type="freemarker">/WEB-INF/pages/listStu.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="listExpForStu" class="listExpForStuAction">
+			<result name="success" type="freemarker">/WEB-INF/pages/listExpForStu.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="preEditStu" class="preEditStuAction">
+			<result name="success" type="freemarker">/WEB-INF/pages/editStu.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="editStu" class="editStuAction">
+			<result name="Success">Success.html</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="deleteStu" class="deleteStuAction">
+		   <result name="deleteStuSuccess" type="redirect">listStu.action</result>
+		</action>
+	</package>
+
+</struts>

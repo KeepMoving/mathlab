@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <title>查询用户</title>
+  <style type="text/css">
+<!--
+body {
+	background-image: url(../images/bg.gif);
+}
+-->
+</style></head>
+ 
+  <body>
+  <form action="queryUserByName.action" target="quDown" method="post">
+    <table width="580" border="0">
+      <tr>
+        <th width="82" scope="col">用户名：</th>
+        <th width="183" scope="col"><input type="text" name="username" value="" /></th>
+        <th width="72" scope="col">身 份：</th>
+        <th width="89" scope="col"><select name="userAuth" id="userAuth">
+          <option value="学生">学生</option>
+          <option value="教师">教师</option>
+          <option value="管理员">管理员</option>
+        </select></th>
+        <th width="42" scope="col"><input type="submit" value="提交"/></th>
+        <th width="86" align="left" scope="col"><input type="reset" value="取消"></th>
+      </tr>
+    </table>
+  </form>
+  </body>
+</html>

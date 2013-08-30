@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="utf8" />
+	<package name="excelfile"  namespace="/" extends="struts-default">
+		<action name="excelToModel" class="excelToModelAction">
+			<result name="input">Fail.html</result>
+			<result name="success">Success.html</result>
+		</action>
+
+		<action name="modelToExcel" class="modelToExcelAction">
+			<result name="input">Fail.html</result>
+			<result name="success">Success.html</result>
+		</action>
+	</package>
+</struts>

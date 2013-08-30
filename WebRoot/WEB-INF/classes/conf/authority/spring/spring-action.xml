@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false" default-dependency-check="none"
+	default-autowire="byName">
+	
+	<bean name="addAuthAction" class="com.mathlab.action.AddAuthAction" singleton="false" />
+	<bean name="listAuthAction" class="com.mathlab.action.ListAuthAction" singleton="false" />
+	<bean name="deleteAuthAction" class="com.mathlab.action.DeleteAuthAction" singleton="false" />
+	<bean name="preEditAuthAction" class="com.mathlab.action.PreEditAuthAction" singleton="false" />
+	<bean name="editAuthAction" class="com.mathlab.action.EditAuthAction" singleton="false" />
+	<bean name="listTeaAuthAction" class="com.mathlab.action.ListTeaAuthAction" singleton="false" />	
+	<bean name="listManAuthAction" class="com.mathlab.action.ListManAuthAction" singleton="false" />
+	<bean name="listGradeAuthAction" class="com.mathlab.action.ListGradeAuthAction" singleton="false" />
+</beans>

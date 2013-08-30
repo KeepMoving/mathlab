@@ -1,0 +1,38 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="utf8" />
+	<package name="file"  namespace="/" extends="struts-default">
+		<action name="showUpload">
+			<result>/upload.jsp</result>
+		</action>
+		<action name="upload" class="uploadAction">
+			<result name="input">/upload.jsp</result>
+<!--			<result name="success">/upload_success.jsp</result>-->
+			<result name="success">/download.jsp</result>
+			<interceptor-ref name="fileUpload">
+<!--可以设置成自己的配置，想文件类型和大小等限制			-->
+<!--				<param name="maximumSize">2097152</param>单位是字节	2M	（2097152B）		-->
+<!--				<param name="allowedTypes">image/bmp,image/x-png,image/png,image/gif,image/jpeg,image/jpg,image/pjpeg</param>-->
+<!--				-->
+<!--					容许文件类型为doc,ppt,xls,pdf,txt,java-->
+<!--				-->
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+
+		<action name="download" class="downloadAction">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="inputName">downloadFile</param>
+			</result>
+		</action>
+		
+		<action name="displayFiles" class="displayFilesAction">
+			<result name="success">diaplayAndDownloadFiles.jsp</result>
+			<result name="input" >Fail.html</result>
+		</action>
+	</package>
+</struts>

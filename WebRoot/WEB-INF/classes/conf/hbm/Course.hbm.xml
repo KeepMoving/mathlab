@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping 	package="com.mathlab.model">
+	<class name="Course" table="course">
+		<id name="courseID" column="courseID">
+			<generator class="identity"/>
+		</id>			
+		<property name="courseName" column="course_courseName" type="string"/>
+		<property name="teacher" column="course_teacher" type="string"/>
+		<property name="classRoom" column="classes_classRoom" type="string"/>
+		<property name="detail" column="classes_detail" type="string"/>						
+	</class>
+</hibernate-mapping>

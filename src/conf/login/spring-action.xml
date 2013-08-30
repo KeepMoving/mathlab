@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false" default-dependency-check="none"
+	default-autowire="byName">
+	
+	<bean name="loginAction" class="com.mathlab.action.LoginAction" singleton="false" />
+	<bean name="loginOutAction" class="com.mathlab.action.LoginOutAction" singleton="false" />
+	<bean name="queryUserByNameAction" class="com.mathlab.action.QueryUserByNameAction" singleton="false" />
+</beans>

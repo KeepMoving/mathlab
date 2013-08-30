@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="false" default-dependency-check="none" default-autowire="byName">
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mathlab" />
+        <property name="user" value="root"  />
+        <property name="password" value="root" />
+        <property name="autoCommitOnClose" value="true" />
+        <property name="checkoutTimeout" value="5000" />
+        <property name="initialPoolSize" value="5" />
+        <property name="minPoolSize" value="5" />
+        <property name="maxPoolSize" value="100" />
+        <property name="maxIdleTime" value="25200" />
+        <property name="acquireIncrement" value="5" />
+        <property name="maxIdleTimeExcessConnections" value="1800" />
+    </bean>
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" ></property>
+		<property name="hibernateProperties">
+		  <props>
+		    <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+            <prop key="hibernate.show_sql">true</prop>
+		  </props>
+		</property>
+		<property name="mappingResources">
+		   <list>
+		     <value>conf/hbm/Student.hbm.xml</value>
+   		     <value>conf/hbm/Authority.hbm.xml</value>	
+		     <value>conf/hbm/Grade.hbm.xml</value>	 
+		     <value>conf/hbm/Note.hbm.xml</value>	 
+   		     <value>conf/hbm/Teacher.hbm.xml</value>    
+   		     <value>conf/hbm/Manager.hbm.xml</value> 
+   		     <value>conf/hbm/Course.hbm.xml</value>
+   		     <value>conf/hbm/StuAndCourse.hbm.xml</value>  
+	         <value>conf/hbm/Experiment.hbm.xml</value>  	          		     		     		         
+		   </list>
+		</property>
+
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping 	package="com.mathlab.model">
+	<class name="Student" table="stu">
+		<id name="stuID" column="stuID">
+			<generator class="identity"/>
+		</id>				
+		<property name="stuName" column="stu_stuName" type="string"/>
+		<property name="stuPwd" column="stu_stuPwd" type="string"/>
+		<property name="realName" column="stu_realName" type="string"/>
+		<property name="stuNum" column="stu_stuNum" type="string"/>				
+		<property name="grade" column="stu_graName" type="string"/>
+		<property name="authority" column="stu_authority" type="string"/>		
+	</class>
+</hibernate-mapping>

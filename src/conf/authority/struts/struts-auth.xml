@@ -1,0 +1,42 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="authority" extends="struts-default">		
+		<action name="addAuth" class="addAuthAction">
+			<result name="addAuthSucess" >Success.html</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="preEditAuth" class="preEditAuthAction">
+			<result name="success" type="freemarker">/WEB-INF/pages/editAuth.ftl</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="editAuth" class="editAuthAction">
+			<result name="success" type="redirect">listAuth.action</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="listAuth" class="listAuthAction">
+		   <result name="listAuthSucess" type="freemarker">/WEB-INF/pages/listAuth.ftl</result>
+		</action>
+		
+		<action name="listGradeAuth" class="listGradeAuthAction">
+		   <result name="listGradeAuthSuccess" type="freemarker">/WEB-INF/pages/addStu.ftl</result>
+		</action>
+		
+		<action name="deleteAuth" class="deleteAuthAction">
+		   <result name="deleteAuthSucess" type="redirect">listAuth.action</result>
+		</action>
+		
+	    <action name="listTeaAuth" class="listTeaAuthAction">
+		   <result name="listTeaAuthSuccess" type="freemarker">/WEB-INF/pages/addTeacher.ftl</result>
+		</action>
+		
+	    <action name="listManAuth" class="listManAuthAction">
+		   <result name="listManAuthSuccess" type="freemarker">/WEB-INF/pages/addManager.ftl</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="false" default-dependency-check="none"
+	default-autowire="byName">
+	
+	<bean name="downloadAction" class="com.mathlab.action.DownloadAction" singleton="false" />
+	<bean name="uploadAction" class="com.mathlab.action.UploadAction" singleton="false" />	
+	<bean name="uploadFilesAction" class="com.mathlab.action.UploadFilesAction" singleton="false" />	
+	<bean name="displayFilesAction" class="com.mathlab.action.DisplayFilesAction" singleton="false" />	
+</beans>

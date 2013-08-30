@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping 	package="com.mathlab.model">
+	<class name="Experiment" table="exp">
+		<id name="expID" column="expID">
+			<generator class="identity"/>
+		</id>				
+		<property name="expName" column="exp_expname" type="string"/>
+		<property name="course" column="exp_course"></property>
+		<property name="teacher" column="exp_teacher"></property>
+		<property name="classRoom" column="exp_classRoom" type="string"/>
+		<property name="date" column="exp_date" type="string"/>
+		<property name="jieci" column="exp_jieci" type="int"/>
+		<property name="detail" column="exp_detail" type="string"/>			
+	</class>
+
+</hibernate-mapping>

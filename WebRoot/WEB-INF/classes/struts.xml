@@ -1,0 +1,28 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.locale" value="zh_CN" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<include file="struts-default.xml" />
+	
+	<include file="conf/student/struts/struts-stu.xml" />
+	<include file="conf/authority/struts/struts-auth.xml" />
+	<include file="conf/note/struts/struts-note.xml" />
+	<include file="conf/teacher/struts/struts-tea.xml" />
+	<include file="conf/grade/struts/struts-grade.xml" />
+	<include file="conf/manager/struts/struts-man.xml" />
+	<include file="conf/course/struts/struts-course.xml" />	
+	<include file="conf/login/struts-login.xml" />	
+	<include file="conf/uploadAndDownload/struts-uploadAndDownload.xml" />	
+	<include file="conf/excel/operation/struts-excelOperation.xml" />
+	<include file="conf/stuAndCourse/struts/struts-stuAndCourse.xml" />
+	<include file="conf/experiment/struts/struts-exp.xml" />
+	<include file="conf/matweb/struts-matweb.xml" />
+</struts>

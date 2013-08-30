@@ -1,0 +1,28 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="login" extends="struts-default">		
+		<action name="login" class="loginAction">
+			<result name="manLoginSuccess" >mainframe.html</result>
+			<result name="teaLoginSuccess" >mainframe_tea.html</result>
+			<result name="stuLoginSuccess" >mainframe_stu.html</result>
+			<result name="userAuthError" >/WEB-INF/pages/userAuthError.html</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="loginOut" class="loginOutAction">
+			<result name="success" >loginOut.jsp</result>
+			<result name="input" >Fail.html</result>
+		</action>
+		
+		<action name="queryUserByName" class="queryUserByNameAction">
+			<result name="manQuerySuccess" type="freemarker">/WEB-INF/pages/manQueryResult.ftl</result>
+			<result name="teaQuerySuccess" type="freemarker">/WEB-INF/pages/teaQueryResult.ftl</result>
+			<result name="stuQuerySuccess" type="freemarker">/WEB-INF/pages/stuQueryResult.ftl</result>
+			<result name="userAuthError">userAuthError.html</result>
+			<result name="input" >Fail.html</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!-- 数据源文件 -->
+    <import resource="conf/spring-db.xml" />
+     	
+     	
+	<import resource="conf/student/spring/spring-dao.xml" />
+	<import resource="conf/student/spring/spring-service.xml" />
+	<import resource="conf/student/spring/spring-action.xml" />
+	
+	<import resource="conf/authority/spring/spring-dao.xml" />
+	<import resource="conf/authority/spring/spring-service.xml" />
+	<import resource="conf/authority/spring/spring-action.xml" />
+	
+	<import resource="conf/note/spring/spring-dao.xml" />
+	<import resource="conf/note/spring/spring-service.xml" />
+	<import resource="conf/note/spring/spring-action.xml" />	
+	
+	<import resource="conf/teacher/spring/spring-dao.xml" />
+	<import resource="conf/teacher/spring/spring-service.xml" />
+	<import resource="conf/teacher/spring/spring-action.xml" />		
+
+	<import resource="conf/grade/spring/spring-dao.xml" />
+	<import resource="conf/grade/spring/spring-service.xml" />
+	<import resource="conf/grade/spring/spring-action.xml" />	
+	
+	<import resource="conf/manager/spring/spring-dao.xml" />
+	<import resource="conf/manager/spring/spring-service.xml" />
+	<import resource="conf/manager/spring/spring-action.xml" />
+	
+	<import resource="conf/course/spring/spring-dao.xml" />
+	<import resource="conf/course/spring/spring-service.xml" />
+	<import resource="conf/course/spring/spring-action.xml" />
+	
+	<import resource="conf/stuAndCourse/spring/spring-dao.xml" />
+	<import resource="conf/stuAndCourse/spring/spring-service.xml" />
+	<import resource="conf/stuAndCourse/spring/spring-action.xml" />
+	
+	<import resource="conf/login/spring-service.xml" />
+	<import resource="conf/login/spring-action.xml" />
+	
+	<import resource="conf/uploadAndDownload/spring-action.xml" />	
+	
+	<import resource="conf/excel/operation/spring-action.xml" />
+	
+	<import resource="conf/experiment/spring/spring-dao.xml" />
+	<import resource="conf/experiment/spring/spring-service.xml" />
+	<import resource="conf/experiment/spring/spring-action.xml" />	
+	
+	<import resource="conf/matweb/spring-action.xml" />
+</beans>
